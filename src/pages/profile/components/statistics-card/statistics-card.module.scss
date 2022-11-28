@@ -1,0 +1,17 @@
+.statisticsCard {
+  background-color: #fff;
+  grid-row-start: span 2;
+  max-width: 720px;
+  &Event {
+    &Date {
+      &Text {
+      }
+      &Number {
+      }
+    }
+    &Title {
+    }
+    &Location {
+    }
+  }
+}

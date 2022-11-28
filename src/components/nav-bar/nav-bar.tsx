@@ -15,7 +15,7 @@ export function NavBar() {
           // userImgUrl="https://i.seadn.io/gae/kTwnvWma_o6PkJyJKCb_7iwYlXwIpCCbC0ANW_xlU1GGFJfzrk60kCnCehDCQmIv4v6L1zeft14EMh9x0MERzQJKkYXfxFSeDyp12Q?auto=format&w=1000"
         />
         <Menu items={menuItems} />
-        <Button className={styles.navbarButton} variant={ButtonVariant.Attention}>
+        <Button className={styles.navbarButton} variant={ButtonVariant.Primary}>
           Выход
         </Button>
       </div>

@@ -1,2 +1,5 @@
 .profile {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 30px;
 }

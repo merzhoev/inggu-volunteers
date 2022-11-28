@@ -1,10 +1,10 @@
 import { PropsWithChildren, HTMLAttributes, useMemo } from 'react';
 import cn from 'classnames';
-import styles from './card.module.scss';
 import { CardShadow } from './card.types';
 import { isCardCustomizedShadow } from './card.utils';
 import { CSSProperties } from 'react';
 import { CARD_DEFAULT_SHADOW } from './card.constants';
+import styles from './card.module.scss';
 
 interface CardProps
   extends PropsWithChildren,

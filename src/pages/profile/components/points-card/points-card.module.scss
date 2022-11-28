@@ -1,0 +1,23 @@
+.pointsCard {
+  background-color: #fff;
+  padding: 40px 0;
+  &Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &Count {
+    color: var(--primaryColor);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+    &Container {
+    }
+  }
+  &Text {
+    font-weight: 500;
+    font-size: 20px;
+    color: #5a5a5a;
+  }
+}
