@@ -1,5 +1,6 @@
 import { List } from 'components/list';
 import { NewsCard, NewsItem } from 'components/news-card';
+import { PageLayout } from 'layouts/page-layout';
 import styles from './news.module.scss';
 
 const news: NewsItem[] = [
@@ -23,8 +24,10 @@ const news: NewsItem[] = [
 
 export function News() {
   return (
-    <div className={styles.news}>
-      <List items={news} Item={NewsCard} gap={30} />
-    </div>
+    <PageLayout title="Новости">
+      <div className={styles.news}>
+        <List items={news} Item={NewsCard} gap={30} />
+      </div>
+    </PageLayout>
   );
 }

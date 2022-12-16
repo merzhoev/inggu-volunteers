@@ -1,5 +1,6 @@
 import { EventCard, EventItem } from 'components/event-card';
 import { List } from 'components/list';
+import { PageLayout } from 'layouts/page-layout';
 import styles from './events.module.scss';
 
 const events: EventItem[] = [
@@ -57,8 +58,10 @@ const events: EventItem[] = [
 
 export function Events() {
   return (
-    <div className={styles.events}>
-      <List items={events} Item={EventCard} listProps={{ className: styles.eventsList }} />
-    </div>
+    <PageLayout title="График Мероприятий">
+      <div className={styles.events}>
+        <List items={events} Item={EventCard} listProps={{ className: styles.eventsList }} />
+      </div>
+    </PageLayout>
   );
 }

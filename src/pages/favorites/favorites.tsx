@@ -1,6 +1,7 @@
 import { List } from 'components/list';
 import { NewsCard } from 'components/news-card';
 import { NewsItem } from 'components/news-card';
+import { PageLayout } from 'layouts/page-layout';
 import styles from './favorites.module.scss';
 
 const favorites: NewsItem[] = [
@@ -25,8 +26,10 @@ const favorites: NewsItem[] = [
 
 export function Favorites() {
   return (
-    <div className={styles.favorite}>
-      <List items={favorites} Item={NewsCard} gap={30} />
-    </div>
+    <PageLayout title="Закладки">
+      <div className={styles.favorite}>
+        <List items={favorites} Item={NewsCard} gap={30} />
+      </div>
+    </PageLayout>
   );
 }

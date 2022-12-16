@@ -1,16 +1,15 @@
-import { FC } from 'react';
+import { PropsWithChildren } from 'react';
 import styles from './page-layout.module.scss';
 
-interface PageLayoutProps {
+interface PageLayoutProps extends PropsWithChildren {
   title: string;
-  Page: FC;
 }
 
-export function PageLayout({ title, Page }: PageLayoutProps) {
+export function PageLayout({ title, children }: PageLayoutProps) {
   return (
     <div className={styles.page}>
       <h2 className={styles.pageTitle}>{title}</h2>
-      <Page />
+      {children}
     </div>
   );
 }
