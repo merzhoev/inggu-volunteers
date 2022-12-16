@@ -15,6 +15,8 @@ interface SpinnerProps {
  */
 
 export function Spinner({ size, color = Color.ButtonSecondaryTextColor }: SpinnerProps) {
+  const colorVariable = getColorVariable(color);
+
   return (
     <div style={{ width: size, height: size }} className={styles.spinner}>
       <div
@@ -22,9 +24,7 @@ export function Spinner({ size, color = Color.ButtonSecondaryTextColor }: Spinne
           width: size / 2,
           height: size / 2,
           borderWidth: size / 8,
-          borderColor: `transparent ${getColorVariable(color)} ${getColorVariable(
-            color,
-          )} ${getColorVariable(color)}`,
+          borderColor: `transparent ${colorVariable} ${colorVariable} ${colorVariable}`,
         }}
         className={styles.spinnerInner}></div>
     </div>

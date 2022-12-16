@@ -1,0 +1,62 @@
+.statisticsCardEvent {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+  border-bottom: 2px solid #d8d8d8;
+  padding: 20px 0;
+  &Date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #edf1f4;
+    width: 60px;
+    border-radius: 10px;
+    padding: 10px 0;
+    &Text {
+      color: #444040;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &Number {
+      color: #444040;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+  &Info {
+    flex-grow: 1;
+    &Title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #5a5a5a;
+      margin-bottom: 7px;
+    }
+    &Location {
+      display: flex;
+      color: #7e7e7e;
+      font-weight: 600;
+      font-size: 15px;
+      column-gap: 3px;
+      line-height: 18px;
+
+      &Icon {
+        flex-shrink: 0;
+      }
+    }
+  }
+  &Accept {
+    display: flex;
+    padding: 12px;
+    border-radius: 10px;
+    align-items: center;
+    column-gap: 5px;
+    background-color: #edf1f4;
+    &Text {
+      color: #5a5a5a;
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+}

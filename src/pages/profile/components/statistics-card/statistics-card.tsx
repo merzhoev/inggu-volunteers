@@ -1,36 +1,85 @@
+import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import { Card } from 'components/card';
-import LocationImage from 'assets/images/location.svg';
-import AcceptImage from 'assets/images/accept.svg';
+import { List } from 'components/list';
+import { StatisticsEvent, StatisticsEventItem } from '../statistics-event';
 import styles from './statistics-card.module.scss';
+import { useState } from 'react';
 
-function StatisticsEvent() {
-  return (
-    <li className={styles.statisticsCardEvent}>
-      <div className={styles.statisticsCardEventDate}>
-        <p className={styles.statisticsCardEventDateText}>окт</p>
-        <p className={styles.statisticsCardEventDateNumber}>19</p>
-      </div>
-      <div className={styles.statisticsCardEventInfo}>
-        <h3 className={styles.statisticsCardEventInfoTitle}>День Дня</h3>
-        <p className={styles.statisticsCardEventInfoLocation}>
-          <LocationImage className={styles.statisticsCardEventInfoLocationIcon} />
-          Магас, главный корпус
-        </p>
-      </div>
-      <div className={styles.statisticsCardEventAccept}>
-        <AcceptImage />
-        <p className={styles.statisticsCardEventAcceptText}>Выполнено</p>
-      </div>
-    </li>
-  );
-}
+const events: StatisticsEventItem[] = [
+  {
+    id: '1',
+    date: 'окт 19',
+    title: 'День дня',
+    location: 'Магас, главный корпус',
+  },
+  {
+    id: '2',
+    date: 'окт 20',
+    title: 'День дней',
+    location: 'Назрань, главный корпус',
+  },
+  {
+    id: '3',
+    date: 'сент 17',
+    title: 'День день день',
+    location: 'Назрань, медицинский корпус корпусНазрань, медицинский корпус корпус',
+  },
+  // {
+  //   id: '1',
+  //   date: 'окт 19',
+  //   title: 'День дня',
+  //   location: 'Магас, главный корпус',
+  // },
+  // {
+  //   id: '2',
+  //   date: 'окт 20',
+  //   title: 'День дней',
+  //   location: 'Назрань, главный корпус',
+  // },
+  // {
+  //   id: '3',
+  //   date: 'сент 17',
+  //   title: 'День день день',
+  //   location: 'Назрань, медицинский корпус корпусНазрань, медицинский корпус корпус',
+  // },
+  // {
+  //   id: '1',
+  //   date: 'окт 19',
+  //   title: 'День дня',
+  //   location: 'Магас, главный корпус',
+  // },
+  // {
+  //   id: '2',
+  //   date: 'окт 20',
+  //   title: 'День дней',
+  //   location: 'Назрань, главный корпус',
+  // },
+  // {
+  //   id: '3',
+  //   date: 'сент 17',
+  //   title: 'День день день',
+  //   location: 'Назрань, медицинский корпус корпусНазрань, медицинский корпус корпус',
+  // },
+];
 
 export function StatisticsCard() {
+  const [tabIndex, setTabIndex] = useState(0);
+
   return (
     <Card className={styles.statisticsCard}>
-      <ul>
-        <StatisticsEvent />
-      </ul>
+      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+        <TabList>
+          <Tab>Мероприятия</Tab>
+          <Tab>Прочее</Tab>
+        </TabList>
+
+        <TabPanel>
+          <List items={events} Item={StatisticsEvent} />
+        </TabPanel>
+        <TabPanel>
+          <h2>Any content 2</h2>
+        </TabPanel>
+      </Tabs>
     </Card>
   );
 }
