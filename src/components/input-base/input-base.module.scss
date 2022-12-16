@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.inputBase {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  &Label {
+    font-weight: 500;
+    font-size: 16px;
+    color: #5a5a5a;
+  }
+  &Wrapper {
+    position: relative;
+    background: #f5f7f8;
+    border-radius: $inputBaseBorderRadius;
+    &_Success {
+      border: 2px solid var(--successColor);
+      box-shadow: 0px 0px 4px var(--successColor);
+    }
+    &_Error {
+      border: 2px solid var(--attentionColor);
+      box-shadow: 0px 0px 4px var(--attentionColor);
+    }
+    &_DefaultSize {
+      height: 50px;
+    }
+    &_Disabled {
+      opacity: 0.5;
+    }
+  }
+  &RightIconWrapper {
+    display: grid;
+    place-content: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &BottomText {
+    font-weight: 600;
+    font-size: 14px;
+    color: #5a5a5a;
+    &_Success {
+      color: var(--successColor);
+    }
+    &_Error {
+      color: var(--attentionColor);
+    }
+  }
+}

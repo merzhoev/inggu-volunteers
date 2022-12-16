@@ -26,7 +26,7 @@ const favorites: NewsItem[] = [
 
 export function Favorites() {
   return (
-    <PageLayout title="Закладки">
+    <PageLayout title="Избранное">
       <div className={styles.favorite}>
         <List items={favorites} Item={NewsCard} gap={30} />
       </div>

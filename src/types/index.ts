@@ -5,4 +5,6 @@ export enum Color {
   ButtonSecondaryTextColor,
   ButtonTextColor,
   CardDefaultShadowColor,
+  SuccessColor,
+  TextColor,
 }

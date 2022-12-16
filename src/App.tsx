@@ -1,8 +1,8 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { routes } from 'pages/routes';
+import { AuthorizedLayout } from 'layouts/authorized-layout';
 import { News } from 'pages/news';
 import { Profile } from 'pages/profile';
-import { AuthorizedLayout } from 'layouts/authorized-layout';
 import { Favorites } from 'pages/favorites';
 import { Events } from 'pages/events';
 

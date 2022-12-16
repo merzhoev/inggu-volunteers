@@ -7,6 +7,8 @@ const colorVariableNames: Record<Color, string> = {
   [Color.ButtonSecondaryTextColor]: '--buttonSecondaryTextColor',
   [Color.ButtonTextColor]: '--buttonTextColor',
   [Color.CardDefaultShadowColor]: '--cardDefaultShadowColor',
+  [Color.SuccessColor]: '--successColor',
+  [Color.TextColor]: '--textColor',
 };
 
 /**

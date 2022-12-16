@@ -20,7 +20,7 @@ export const menuItems: MenuItem[] = [
   {
     url: routes.favorites,
     Icon: StarIcon,
-    label: 'Закладки',
+    label: 'Избранное',
   },
   {
     url: routes.events,
