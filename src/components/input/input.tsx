@@ -3,12 +3,13 @@ import { InputBase, InputBaseProps } from 'components/input-base';
 import styles from './input.module.scss';
 import cn from 'classnames';
 
-interface InputProps
+export interface InputProps
   extends Omit<
       Props<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
-      'size' | 'type' | 'children'
+      'size' | 'value' | 'type' | 'children'
     >,
     Omit<InputBaseProps, 'children'> {
+  value?: string;
   type?: string;
 }
 
